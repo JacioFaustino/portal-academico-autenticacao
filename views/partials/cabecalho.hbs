@@ -1,0 +1,12 @@
+<header class="cabecalho">
+  <a class="marca" href="{{#if usuario}}/painel{{else}}/login{{/if}}">Portal Acadêmico</a>
+  <nav aria-label="Navegação principal">
+    {{#if usuario}}
+      <a href="/painel">Painel</a>
+      {{#if usuario.ehAdministrador}}<a href="/administracao">Administração</a>{{/if}}
+      <form action="/logout" method="post" style="margin:0"><button class="perigo" type="submit" style="margin:0;padding:8px 16px">Sair</button></form>
+    {{else}}
+      <a href="/login">Login</a>
+    {{/if}}
+  </nav>
+</header>

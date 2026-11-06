@@ -1,0 +1,19 @@
+<section class="cartao login">
+  <p class="etiqueta">ACESSO AO SISTEMA</p>
+  <h1>Entrar no Portal Acadêmico</h1>
+  <p>Utilize sua conta para acessar os recursos protegidos.</p>
+  {{#if mensagem}}<p class="mensagem sucesso">{{mensagem}}</p>{{/if}}
+  {{#if erro}}<p class="mensagem erro" role="alert">{{erro}}</p>{{/if}}
+  <form action="/login" method="post">
+    <label for="email">E-mail</label>
+    <input id="email" name="email" type="email" value="{{email}}" required autocomplete="username">
+    <label for="senha">Senha</label>
+    <input id="senha" name="senha" type="password" required autocomplete="current-password">
+    <button type="submit">Entrar</button>
+  </form>
+  <aside class="credenciais">
+    <strong>Contas didáticas</strong>
+    <span>estudante@escola.test / aluno123</span>
+    <span>admin@escola.test / admin123</span>
+  </aside>
+</section>

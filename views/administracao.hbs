@@ -1,0 +1,12 @@
+<section class="boas-vindas">
+  <p class="etiqueta">ÁREA RESTRITA</p>
+  <h1>Administração</h1>
+  <p>Somente usuários com perfil administrador deverão visualizar esta página.</p>
+</section>
+<section class="cartao">
+  <h2>Usuários cadastrados</h2>
+  <div class="tabela-responsiva">
+    <table><thead><tr><th>Nome</th><th>E-mail</th><th>Perfil</th><th>Situação</th></tr></thead>
+    <tbody>{{#each usuarios}}<tr><td>{{nome}}</td><td>{{email}}</td><td>{{perfil}}</td><td>{{#if ativo}}Ativo{{else}}Inativo{{/if}}</td></tr>{{/each}}</tbody></table>
+  </div>
+</section>
