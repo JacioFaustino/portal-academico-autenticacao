@@ -14,7 +14,7 @@ router.get("/painel", exigirAutenticacao, (req, res) => {
 router.get(
   "/administracao",
   exigirAutenticacao,
-  exigirPerfil("administrador"),
+  exigirPerfil("Administrador"),
   async (req, res, next) => {
     try {
       const usuarios = await Usuario.findAll({

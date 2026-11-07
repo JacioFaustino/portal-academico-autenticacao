@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => sequelize.define("Usuario", {
   perfil: {
     type: DataTypes.STRING(30),
     allowNull: false,
-    validate: { isIn: [["estudante", "administrador"]] }
+    validate: { isIn: [["Estudante", "Administrador"]] }
   },
   ativo: { type: DataTypes.BOOLEAN, allowNull: false, defaultValue: true }
 }, {

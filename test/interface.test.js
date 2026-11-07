@@ -9,8 +9,8 @@ const { sequelize, Usuario } = require("../models");
 test.before(async () => {
   await sequelize.sync({ force: true });
   await Usuario.bulkCreate([
-    { nome: "Estudante Demo", email: "estudante@escola.test", senhaHash: await bcrypt.hash("aluno123", 4), perfil: "estudante", ativo: true },
-    { nome: "Administrador Demo", email: "admin@escola.test", senhaHash: await bcrypt.hash("admin123", 4), perfil: "administrador", ativo: true }
+    { nome: "Estudante Demo", email: "estudante@escola.test", senhaHash: await bcrypt.hash("aluno123", 4), perfil: "Estudante", ativo: true },
+    { nome: "Administrador Demo", email: "admin@escola.test", senhaHash: await bcrypt.hash("admin123", 4), perfil: "Administrador", ativo: true }
   ]);
 });
 test.after(() => sequelize.close());

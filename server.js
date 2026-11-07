@@ -12,14 +12,14 @@ async function prepararBanco() {
         nome: "Estudante Demo",
         email: "estudante@escola.test",
         senhaHash: await bcrypt.hash("aluno123", 10),
-        perfil: "estudante",
+        perfil: "Estudante",
         ativo: true
       },
       {
         nome: "Administrador Demo",
         email: "admin@escola.test",
         senhaHash: await bcrypt.hash("admin123", 10),
-        perfil: "administrador",
+        perfil: "Administrador",
         ativo: true
       }
     ]);
